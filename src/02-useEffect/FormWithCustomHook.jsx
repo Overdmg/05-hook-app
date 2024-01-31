@@ -45,6 +45,7 @@ export const FormWithCustomHook = () => {
             onChange={ onImputChange }
         />      
 
+        <button onClick={ onResetForm } className="btn btn-primary mt-3"> Borrar </button>
 
     </>
   )
