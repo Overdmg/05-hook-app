@@ -4,7 +4,7 @@ import { useForm } from "../hooks/useForm";
 
 export const FormWithCustomHook = () => {
 
-    const {formState, onImputChange, username, password, email} = useForm({
+    const {formState, onImputChange, onResetForm, username, password, email } = useForm({
       username: '',
       password: '',
       email: ''
