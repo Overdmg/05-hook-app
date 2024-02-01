@@ -32,6 +32,10 @@ export const MultipleCustomHooks = () => {
 
         }
 
+        <button className='btn btn-primary'> 
+            Next Quote
+        </button>
+
     </>
   )
 }
