@@ -1,19 +1,28 @@
 import React from 'react';
 import { useFetch } from '../hooks/useFetch';
+import { useCounter } from '../hooks/useCounter';
 
 
 export const MultipleCustomHooks = () => {
 
-    const { data, isLoading, hasError} = useFetch('https://api.breakingbadquotes.xyz/v1/quotes');
+    const { counter } = useCounter;
+
+    const numero = 1;
+
+    console.log(counter);
+
+    const { data, isLoading, hasError} = useFetch(`https://api.breakingbadquotes.xyz/v1/quotes/${numero}`);
 
     const {quote, author} = !!data && data[0];
 
-    console.log(data, isLoading, hasError);
+    //console.log(data, isLoading, hasError);
 
+    //console.log({initialValue});
 
   return ( 
     <>
         <h1>BreakingBad Quotes</h1>
+        <h2>Cont Val: {counter}</h2>
         <hr />    
 
         {
@@ -32,7 +41,7 @@ export const MultipleCustomHooks = () => {
 
         }
 
-        <button className='btn btn-primary'> 
+        <button className='btn btn-primary' > 
             Next Quote
         </button>
 
