@@ -11,9 +11,6 @@ export const MultipleCustomHooks = () => {
      
     const {quote, author} = !!data && data[0];
 
-   
-    //const { author, quote } = Quote();
-
   return ( 
     <>
         <h1>BreakingBad Quotes</h1>
@@ -44,11 +41,9 @@ export const MultipleCustomHooks = () => {
                )
                 : (
                     <Quote author={author} quote={quote} />
-             )
-            
+             )            
     } 
-        
-        
+               
 
         <button className='btn btn-primary' 
                 onClick={decrement}
