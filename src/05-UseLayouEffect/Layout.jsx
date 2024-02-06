@@ -3,7 +3,7 @@ import { useFetch, useCounter } from '../hooks';
 import { LoadingQuote, Quote } from '../03-examples';
 
 
-export const MultipleCustomHooks = () => {
+export const Layout = () => {
 
     const { counter, increment, decrement } = useCounter(1); 
 
@@ -17,23 +17,6 @@ export const MultipleCustomHooks = () => {
         <h2>Cont Val: {counter}</h2>
         <hr />    
 
-        {
-         /*   
-            isLoading
-                ? (
-                    <div className='alert alert-info text-center'>
-                        Cargando...
-                    </div>
-               )
-                : (
-                    <blockquote className='blockquote text-end'>
-                        <p className='mb-2'>{quote}</p>
-                        <footer className='blockquote-footer'>{author}</footer>
-                    </blockquote>
-             )
-            */
-        } 
-
         {          
             isLoading
                 ? (
@@ -44,7 +27,8 @@ export const MultipleCustomHooks = () => {
              )            
     } 
                
-
+        <hr />   
+         
         <button className='btn btn-primary' 
                 onClick={decrement}
                 disabled={isLoading}> 
