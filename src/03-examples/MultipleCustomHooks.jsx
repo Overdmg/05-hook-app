@@ -1,23 +1,18 @@
-import React from 'react';
-import { useFetch } from '../hooks/useFetch';
-import { useCounter } from '../hooks/useCounter';
+
+import { useFetch, useCounter } from '../hooks';
+import { LoadingQuote, Quote } from '../03-examples';
 
 
 export const MultipleCustomHooks = () => {
 
-    const { counter, increment, decrement } = useCounter();
-
-    //const numero = 1;
-
-    console.log(counter);
+    const { counter, increment, decrement } = useCounter(1); 
 
     const { data, isLoading, hasError} = useFetch(`https://api.breakingbadquotes.xyz/v1/quotes/${counter}`);
-
+     
     const {quote, author} = !!data && data[0];
 
-    //console.log(data, isLoading, hasError);
-
-    //console.log({initialValue});
+   
+    //const { author, quote } = Quote();
 
   return ( 
     <>
@@ -26,6 +21,7 @@ export const MultipleCustomHooks = () => {
         <hr />    
 
         {
+         /*   
             isLoading
                 ? (
                     <div className='alert alert-info text-center'>
@@ -38,8 +34,21 @@ export const MultipleCustomHooks = () => {
                         <footer className='blockquote-footer'>{author}</footer>
                     </blockquote>
              )
+            */
+        } 
 
-        }
+        {          
+            isLoading
+                ? (
+                    <LoadingQuote />
+               )
+                : (
+                    <Quote author={author} quote={quote} />
+             )
+            
+    } 
+        
+        
 
         <button className='btn btn-primary' 
                 onClick={decrement}
