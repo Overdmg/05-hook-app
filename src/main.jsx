@@ -10,11 +10,12 @@ import './index.css'
 //import { FormWithCustomHook } from './02-useEffect/FormWithCustomHook'
 //import { MultipleCustomHooks } from './03-examples/MultipleCustomHooks'
 //import { FocusScreen } from './04-useRef/FocusScreen'
-import { Layout } from './05-UseLayouEffect/Layout'
+//import { Layout } from './05-UseLayouEffect/Layout'
+import { Memorize } from './06-memos/Memorize'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   //<React.StrictMode>
-    <Layout/>
+    <Memorize/>
   //</React.StrictMode>,
 )
