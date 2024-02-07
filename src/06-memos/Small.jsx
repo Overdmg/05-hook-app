@@ -1,12 +1,14 @@
+import React from "react"
 
-
-export const Small = ({ value }) => {
+export const Small = React.memo(
+    ({ value }) => {
   
-    console.log('Me volvi a re-dibujar')
-  
-    return (
+        console.log('Me volvi a re-dibujar')
+      
+        return (
+        
+            <small> {value} </small>
     
-        <small> {value} </small>
-
-  )
-}
+      )
+    }
+) 
