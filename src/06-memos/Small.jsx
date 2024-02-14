@@ -1,7 +1,8 @@
+
+/*
 import React from "react"
 
-export const Small = React.memo(
-    ({ value }) => {
+export const Small = React.memo( ({ value }) => {
   
         console.log('Me volvi a re-dibujar')
       
@@ -12,3 +13,15 @@ export const Small = React.memo(
       )
     }
 ) 
+*/
+
+export const Small =  ({ value }) => {
+  
+  console.log('Me volvi a re-dibujar')
+
+  return (
+  
+      <small> {value} </small>
+
+)
+}
