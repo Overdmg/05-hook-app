@@ -1,8 +1,9 @@
+import React from 'react'
 
+export const ShowIncrement = React.memo( ({ increment }) => {
+   
 
-export default function ShowIncrement({ increment }) {
-
-    
+    console.log('Me re-dibuje');
 
     return (
       <button
@@ -15,4 +16,6 @@ export default function ShowIncrement({ increment }) {
         Increment
       </button>
   )
-}
+})
+
+
