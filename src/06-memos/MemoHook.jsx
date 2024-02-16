@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { useCounter } from "../hooks";
+
+
 
 
 
@@ -16,11 +18,16 @@ export const MemoHook = () => {
 
  const [ show, setShow ] = useState(true);
 
+
+ const memorizedValue = useMemo ( () => heavyStuff(counter),[counter] ); 
+
+
+
   return (
    <>
     <h1>Counter:  <small>{ counter }</small>  </h1>
     <hr/>
-    <h4> { heavyStuff(counter) } </h4>
+    <h4> { memorizedValue } </h4>
     <hr/>
 
 
