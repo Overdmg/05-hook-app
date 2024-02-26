@@ -1,4 +1,4 @@
-export const todoReducer = ( initialstate, action ) => {
+export const todoReducer = ( initialstate = [], action ) => {
     
     switch (action.type) {
         case 'ABC':
